@@ -8,6 +8,7 @@ import me.justindevb.gladiator.events.ViolationEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class GladiatorListener extends ListenerBase implements Listener {
         initGladiatorSpecificConfig();
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onFlag(ViolationEvent event) {
         String fullName = event.getCheckName() + event.getCheckType();
         if (disabledRecordings.contains(event.getCheckName().toLowerCase())
