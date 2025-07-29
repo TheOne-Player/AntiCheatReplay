@@ -8,6 +8,6 @@ softdepend: [Vulcan, Spartan, Matrix, GodsEye, Atlas, Kauri, Karhu, KarhuAPI, Th
 api-version: 1.13
 commands:
   replayreload:
-      description: Reload config
+      description: Reload config.
   report:
-      description: Report a player of suspected hacks
+      description: Report a player of suspected hacks.
